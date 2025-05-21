@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { NavList } from '../data/nav-list.data';
 
 @Component({
   selector: 'app-navbar',
@@ -14,19 +15,6 @@ export class NavbarComponent {
   constructor() {}
 
   ngOnInit() {
-    this.navList = [
-      {
-        title: 'QR Code Simple',
-        route: 'qr-code-simple',
-      },
-      {
-        title: 'QR Code Image',
-        route: 'qr-code-image',
-      },
-      {
-        title: 'Drag and Drop',
-        route: 'drag-drop',
-      },
-    ];
+    this.navList = NavList;
   }
 }
