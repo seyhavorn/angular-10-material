@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold px-3" routerLink="/">
+      <i class="bi bi-qr-code-scan me-2"></i>Angular 19 Demo
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active">
+            <i class="bi bi-house-door me-1"></i>Home
+          </a>
+        </li>
+        <ng-container *ngFor="let nav of navList">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [routerLink]="nav.route"
+              routerLinkActive="active"
+            >
+              <i class="bi bi-info-circle me-1"></i>
+              {{ nav.title }}
+            </a>
+          </li>
+        </ng-container>
+        <li class="nav-item d-none d-lg-block ms-3">
+          <span class="navbar-text text-light small">
+            <i class="bi bi-person-circle me-1"></i>Welcome!
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
