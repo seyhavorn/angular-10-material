@@ -1,0 +1,14 @@
+<mat-form-field>
+  <mat-label>Select a country</mat-label>
+  <mat-select [(value)]="selected">
+    <mat-option value="" disabled>Select a country</mat-option>
+    <mat-option *ngFor="let item of countries" [value]="item.name">
+      <img
+        [src]="'assets/flags/' + (item.code | lowercase) + '.png'"
+        alt="{{ item.name }} flag"
+        style="width: 20px; height: 15px; margin-right: 10px"
+      />
+      {{ item.name }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

@@ -12,4 +12,8 @@ export const NavList: NavItem[] = [
     title: 'DD Between List',
     route: 'drag-drop-list',
   },
+  {
+    title: 'Country Code',
+    route: 'country-code',
+  },
 ];
